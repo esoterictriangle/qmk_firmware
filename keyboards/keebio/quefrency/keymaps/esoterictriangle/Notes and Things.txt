@@ -1,0 +1,1 @@
+set_single_persistent_default_layer(layer) to set a default on keyboard plug in; prolly wanna make this qwerty
