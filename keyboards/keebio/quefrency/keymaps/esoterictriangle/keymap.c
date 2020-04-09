@@ -15,7 +15,7 @@ extern keymap_config_t keymap_config;
 #define KC_NTAB LCTL(KC_T)
 #define KC_KEE LCTL(LALT(KC_A))
 #define KC_TASK LCTL(LSFT(KC_ESC))
-#define TAPPING_TOGGLE 2
+
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	* |-----|-----|   +-------+-+---+-+---+-+---+-+---+-+---+-+---+-+---+-----+-+---------------+---+-----------+
 	* |     |     |   |          |     |     |     |     |     | KP1 | KP2 | KP3 |     |     |      |     |     |
 	* |-----|-----|   +---------+-----+-----+-----+-----+-+---+-----+-----------+-------------------------------+
-	* |DF(1)|     |   |     |     |     |     |           |                 |     |     |     |     |     |     |
+	* |DF(1)|DF(0)|   |     |     |     |     |           |                 |     |     |     |     |     |     |
 	* +-----------+   +-----------------------------------+-----------------------------------------------+-----+
 	*/
 	
@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_VOLU, KC_VOLD, _______, _______, KC_UP, _______,  _______, _______, KC_KP_7, KC_KP_8, KC_KP_9, _______, _______, _______, _______, _______, _______, \
     KC_CALC, _______, _______,  KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, KC_KP_4, KC_KP_5, KC_KP_6, _______, _______, _______, _______, _______, \
     _______, _______, _______, _______, _______, _______, _______, _______, KC_KP_1, KC_KP_2, KC_KP_3, _______, _______, _______, _______, _______, \
-    DF(_COLEMAK), _______, _______, _______, _______, _______, _______,      KC_KP_0, XXXXXXX, _______, _______, _______, _______, _______, _______
+    DF(_COLEMAK), DF(_BASE), _______, _______, _______, _______, _______,      KC_KP_0, XXXXXXX, _______, _______, _______, _______, _______, _______
   ),
   
   /*
@@ -86,6 +86,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_HOME,   KC_END,   KC_TAB,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN,    KC_LBRC, KC_RBRC, KC_BSLS, KC_PSCR, \
     KC_NTAB,   KC_F5,   KC_CAPS, KC_A,    KC_R,    KC_S,    KC_T,    KC_D,    KC_H,    KC_N,    KC_E,    KC_I,    KC_O, KC_QUOT, KC_ENT,  KC_PGUP, \
     KC_KEE,   KC_UNDO,   KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT, KC_UP,   KC_PGDN, \
-    KC_COPY,   KC_PASTE,  KC_LCTL, KC_LGUI, KC_LALT, MO(_FN1), KC_SPC,        KC_SPC, XXXXXXX, MO(_FN1), KC_RALT, KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
+    KC_COPY,   KC_PASTE,  KC_LCTL, KC_LGUI, KC_LALT, TT(_FN1), KC_SPC,        KC_SPC, XXXXXXX, TT(_FN1), KC_RALT, KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
   )
 };
