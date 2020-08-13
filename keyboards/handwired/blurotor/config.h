@@ -42,6 +42,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #define MATRIX_ROW_PINS { F7, F6, F5, F4, F1 }
 #define MATRIX_COL_PINS { C7, D6, B7, B6 }
+#define ENCODERS_PAD_A { B5 }
+#define ENCODERS_PAD_B { D7 }
+#define NUM_LOCK_LED_PIN { C6 }
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL */
