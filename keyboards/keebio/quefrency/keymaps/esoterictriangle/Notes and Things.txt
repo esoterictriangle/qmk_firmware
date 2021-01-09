@@ -1,0 +1,35 @@
+set_single_persistent_default_layer(layer) to set a default on keyboard plug in; prolly wanna make this qwerty (may or may not need this)
+
+TAPPING_TOGGLE may need to be moved to config instead of the keymap
+
+If I'm gonna do emoji I need to remember to enable UNICODEMAP_ENABLE or similar in rules.mk
+
+I can remove the RESET key since there are reset buttons soldered to the pcb
+
+georgepetri has some rgb code for layers I might want to refer to
+
+this goes in config for rgb:
+#undef RGBLED_NUM 
+#define RGBLED_NUM 12 //change to # of LEDs
+#define RGBLED_SPLIT { 6, 6 } //define which half has how many LEDs
+
+there's a pin for LED on the L board--12 (9/PB5 on the ProMicro)--should be able to hook this one into lighting for caps lock--link LED to the hole on the board and to either GND or VCC
+
+this code should enable caps lock LED (and would go inside keymap?); I don't understand what makes this example inverted, though.
+
+bool led_update_kb(led_t led_state) {
+    bool res = led_update_user(led_state);
+    if(res) {
+        // writePin sets the pin high for 1 and low for 0.
+        // In this example the pins are inverted, setting
+        // it low/0 turns it on, and high/1 turns the LED off.
+        // This behavior depends on whether the LED is between the pin
+        // and VCC or the pin and GND.
+        writePin(B5, !led_state.caps_lock); //B5 should be the LED pin I think lol
+    }
+    return res;
+}
+
+this one is the code for starting RGB after everything else has loaded:
+
+void keyboard_post_init_user(void) {}
