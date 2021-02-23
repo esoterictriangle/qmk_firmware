@@ -21,46 +21,31 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID    0xFEED
-#define PRODUCT_ID   0x0000
+#define PRODUCT_ID   0xA3A3
 #define DEVICE_VER   0x0001
 #define MANUFACTURER esoteric triangle
 #define PRODUCT      SSK
+#define DESCRIPTION  Split 60 percent ortho handwire keyboard 
 
 /* key matrix size */
 #define MATRIX_ROWS 2
 #define MATRIX_COLS 3
 
-/*
- * Keyboard Matrix Assignments
- *
- * Change this to how you wired your keyboard
- * COLS: AVR pins used for columns, left to right
- * ROWS: AVR pins used for rows, top to bottom
- * DIODE_DIRECTION: COL2ROW = COL = Anode (+), ROW = Cathode (-, marked on diode)
- *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
- *
- */
-#define MATRIX_ROW_PINS { D0, D5 }
-#define MATRIX_COL_PINS { F1, F0, B0 }
-#define UNUSED_PINS
+#define MATRIX_ROW_PINS {  }
+#define MATRIX_COL_PINS {  }
+#define MATRIX_ROW_PINS_RIGHT { <row pins> }
+#define MATRIX_COL_PINS_RIGHT { <col pins> }
+#define ENCODERS_PAD_A {  }
+#define ENCODERS_PAD_B {  }
 
-/* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
 
-/*
- * Split Keyboard specific options, make sure you have 'SPLIT_KEYBOARD = yes' in your rules.mk, and define SOFT_SERIAL_PIN.
- */
-#define SOFT_SERIAL_PIN D0  // or D1, D2, D3, E6
+#define USE_I2C
+#define SPLIT_HAND_PIN xx //unused pin?
 
-//#define LED_NUM_LOCK_PIN B0
-//#define LED_CAPS_LOCK_PIN B1
-//#define LED_SCROLL_LOCK_PIN B2
-//#define LED_COMPOSE_PIN B3
-//#define LED_KANA_PIN B4
-
-//#define BACKLIGHT_PIN B7
-//#define BACKLIGHT_LEVELS 3
-//#define BACKLIGHT_BREATHING
+#define RGB_DI_PIN xx
+#define RGBLIGHT_ANIMATIONS //all animations
+#define RGBLED_NUM 5
 
 //#define RGB_DI_PIN E2
 //#ifdef RGB_DI_PIN
