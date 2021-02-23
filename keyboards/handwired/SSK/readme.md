@@ -2,11 +2,11 @@
 
 ![SSK](imgur.com image replace me!)
 
-A split handwire with a small macro section. i2c is hardwired in using flexible wires that coil inside the case to allow the two halves to join together when desired.
+A split handwire with a small macro section. i2c is hardwired in using flexible wires that coil inside the case to allow the two halves to join together when desired. A [3D printed case with optional hiprofile segment](inset link here) is available as stls. You'll need 11 3x1.5mm magnets, 8 M3x(idk) screws, and silicone cover stranded core 30AWG wire for the i2c.
 
-* Keyboard Maintainer: [esoteric triangle](https://github.com/yourusername)
-* Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
+* Keyboard Maintainer: [esoteric triangle](https://github.com/esoterictriangle)
+* Hardware Supported: Pro Micro
+* Hardware Availability: Anywhere Pro Micros are sold
 
 Make example for this keyboard (after setting up your build environment):
 
